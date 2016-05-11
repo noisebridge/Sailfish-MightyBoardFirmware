@@ -472,6 +472,33 @@ platforms = {
                         'EEPROM_MENU_ENABLE', 'HAS_RGB_LED',
                         'XY_MIN_HOMING' ]
         },
+
+    'ctc3d_bizerX' :
+        { 'mcu' : 'atmega2560', 
+          'programmer' : 'stk500v2',
+          'board_directory' : 'mighty_one',
+          'defines' : [ 'BUILD_STATS', 'ALTERNATE_UART',
+                        'PLATFORM_SPLASH1_MSG=\\\"Sailfish CTC3d Bizer \\\"',
+                        'PLATFORM_TOOLHEAD_OFFSET_X=3201',
+                        'PLATFORM_THE_REPLICATOR_STR=\\\"FF Bizer\\\"',
+                        'HEATERS_ON_STEROIDS', 'AUTO_LEVEL',
+                        'PSTOP_ZMIN_LEVEL', 'HAS_RGB_LED', 'RGB_LED_MENU',
+                        'EEPROM_MENU_ENABLE' ]
+        },
+    'ctc3d_bizerY' :
+        { 'mcu' : 'atmega1280',
+          'programmer' : 'stk500v2',
+          'board_directory' : 'mighty_one',
+          'squeeze' : [ 'Menu.cc', 'Interface.cc', 'InterfaceBoard.cc',
+                        'LiquidCrystalSerial.cc', 'DigiPots.cc',
+                        'Eeprom.cc', 'EepromMap.cc', 'Piezo.cc',
+                        'UtilityScripts.cc' ],
+          'defines' : [ 'HEATERS_ON_STEROIDS', 'HAS_RGB_LED',
+                        'PLATFORM_SPLASH1_MSG=\\\"Sailfish CTC3D Bizer \\\"',
+                        'PLATFORM_TOOLHEAD_OFFSET_X=3201',
+                        'PLATFORM_THE_REPLICATOR_STR=\\\"CTC3D Bizer\\\"',
+                        'EEPROM_MENU_ENABLE' ]
+        },
 }
 
 # Load data from ~/.sailfish_platforms.py
