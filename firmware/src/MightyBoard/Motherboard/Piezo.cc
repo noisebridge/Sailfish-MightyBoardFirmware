@@ -462,10 +462,10 @@ void playTune(uint8_t tuneid) {
 	  tunePtr = tune_error;
 	  break;
      case TUNE_PRINT_DONE:
-	  tunePtr = tune_print_done;
+	  tunePtr = tune_undertone;
 	  break;
      case TUNE_STARTUP:
-	  tunePtr = tune_startup;
+	  tunePtr = tune_undertone;
 	  break;
      case TUNE_MAKERBOT_TV:
 	  tunePtr = tune_makerbot_tv;
@@ -474,13 +474,13 @@ void playTune(uint8_t tuneid) {
 	  tunePtr = tune_beethoven_5th;
 	  break;
      case TUNE_FILAMENT_START:
-	  tunePtr = tune_filament_start;
+	  tunePtr = tune_overtone;
 	  break;
      case TUNE_PAUSE:
 	  tunePtr = tune_pause;
 	  break;
      case TUNE_SAILFISH_STARTUP:
-	  tunePtr = tune_sailfish_startup;
+	  tunePtr = tune_overtone;
 	  break;
      default:
 	  break;
