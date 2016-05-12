@@ -499,7 +499,7 @@ void playTune(uint8_t tuneid) {
 	  } while (duration != 0 ); 	//duration == 0 marks the end of the tune
      }
      else 
-	  setTone(NOTE_B2, 500);	//Play this is the tuneid doesn't exist
+	  setTone(NOTE_B2, 500);	//Play this if the tuneid doesn't exist
 }
 
 
