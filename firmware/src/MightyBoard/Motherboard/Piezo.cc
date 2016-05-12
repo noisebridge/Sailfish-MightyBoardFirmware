@@ -276,6 +276,76 @@ void runPiezoSlice(void) {
 
 //Tunes
 
+const uint16_t tune_overtone[] PROGMEM = {
+     NOTE_C3,	 333,
+     NOTE_0,	 20,
+     NOTE_C4,    333,
+     NOTE_0,     20,
+     NOTE_G4,    333,
+     NOTE_0,     20,
+     NOTE_C5,    333,
+     NOTE_0,     20,
+     NOTE_E5,    333,
+     NOTE_0,     20,
+     NOTE_G5,    333,
+     NOTE_0,     20,
+     NOTE_AS5,   333,
+     NOTE_0,     20,
+     NOTE_C6,    333,
+     NOTE_0,     20,
+     NOTE_D6,    333,
+     NOTE_0,     20,
+     NOTE_E6,    333,
+     NOTE_0,     20,
+     NOTE_FS6,   333,
+     NOTE_0,     20,
+     NOTE_G6,    333,
+     NOTE_0,     20,
+     NOTE_GS6,   333,
+     NOTE_0,     20,
+     NOTE_AS6,   333,
+     NOTE_0,     20,
+     NOTE_B6,    333,
+     NOTE_0,     20,
+     NOTE_C7,    333,
+     NOTE_0,     0,
+};
+
+const uint16_t tune_undertone[] PROGMEM = {
+     NOTE_C7,	 333,
+     NOTE_0,	 20,
+     NOTE_C6,    333,
+     NOTE_0,     20,
+     NOTE_F5,    333,
+     NOTE_0,     20,
+     NOTE_C5,    333,
+     NOTE_0,     20,
+     NOTE_GS4    333,
+     NOTE_0,     20,
+     NOTE_F4,    333,
+     NOTE_0,     20,
+     NOTE_D4,   333,
+     NOTE_0,     20,
+     NOTE_C4,    333,
+     NOTE_0,     20,
+     NOTE_AS3,    333,
+     NOTE_0,     20,
+     NOTE_GS3,    333,
+     NOTE_0,     20,
+     NOTE_FS3,   333,
+     NOTE_0,     20,
+     NOTE_F3,    333,
+     NOTE_0,     20,
+     NOTE_E3,   333,
+     NOTE_0,     20,
+     NOTE_D3,   333,
+     NOTE_0,     20,
+     NOTE_CS3,    333,
+     NOTE_0,     20,
+     NOTE_C3,    333,
+     NOTE_0,     0,
+};
+
 const uint16_t tune_error[] PROGMEM = {
      NOTE_E5,    105,
      NOTE_0,     105,
@@ -392,10 +462,10 @@ void playTune(uint8_t tuneid) {
 	  tunePtr = tune_error;
 	  break;
      case TUNE_PRINT_DONE:
-	  tunePtr = tune_print_done;
+	  tunePtr = tune_undertone;
 	  break;
      case TUNE_STARTUP:
-	  tunePtr = tune_startup;
+	  tunePtr = tune_undertone;
 	  break;
      case TUNE_MAKERBOT_TV:
 	  tunePtr = tune_makerbot_tv;
@@ -404,13 +474,13 @@ void playTune(uint8_t tuneid) {
 	  tunePtr = tune_beethoven_5th;
 	  break;
      case TUNE_FILAMENT_START:
-	  tunePtr = tune_filament_start;
+	  tunePtr = tune_overtone;
 	  break;
      case TUNE_PAUSE:
 	  tunePtr = tune_pause;
 	  break;
      case TUNE_SAILFISH_STARTUP:
-	  tunePtr = tune_sailfish_startup;
+	  tunePtr = tune_overtone;
 	  break;
      default:
 	  break;
@@ -429,7 +499,7 @@ void playTune(uint8_t tuneid) {
 	  } while (duration != 0 ); 	//duration == 0 marks the end of the tune
      }
      else 
-	  setTone(NOTE_B2, 500);	//Play this is the tuneid doesn't exist
+	  setTone(NOTE_B2, 500);	//Play this if the tuneid doesn't exist
 }
 
 
