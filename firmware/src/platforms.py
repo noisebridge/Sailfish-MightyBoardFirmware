@@ -316,7 +316,7 @@ platforms = {
           'defines' : [ 'HEATERS_ON_STEROIDS', 'HAS_RGB_LED',
                         'PLATFORM_SPLASH1_MSG=\\\"Sailfish FF Creator \\\"',
                         'PLATFORM_TOOLHEAD_OFFSET_X=3201',
-                        'PLATFORM_THE_REPLICATOR_STR=\\\"FF Creator\\\"',
+                        'PLATFORM_THE_REPLICATOR_STR=\\\"Noisebridge FFC\\\"',
                         'EEPROM_MENU_ENABLE' ]
         },
 
@@ -473,30 +473,18 @@ platforms = {
                         'XY_MIN_HOMING' ]
         },
 
-    'ctc3d_bizerX' :
-        { 'mcu' : 'atmega2560', 
-          'programmer' : 'stk500v2',
-          'board_directory' : 'mighty_one',
-          'defines' : [ 'BUILD_STATS', 'ALTERNATE_UART',
-                        'PLATFORM_SPLASH1_MSG=\\\"Sailfish CTC3d Bizer \\\"',
-                        'PLATFORM_TOOLHEAD_OFFSET_X=3201',
-                        'PLATFORM_THE_REPLICATOR_STR=\\\"FF Bizer\\\"',
-                        'HEATERS_ON_STEROIDS', 'AUTO_LEVEL',
-                        'PSTOP_ZMIN_LEVEL', 'HAS_RGB_LED', 'RGB_LED_MENU',
-                        'EEPROM_MENU_ENABLE' ]
-        },
-    'ctc3d_bizerY' :
+    'ctc3d_bizer' :
         { 'mcu' : 'atmega1280',
-          'programmer' : 'stk500v2',
+          'programmer' : 'stk500v1',
           'board_directory' : 'mighty_one',
           'squeeze' : [ 'Menu.cc', 'Interface.cc', 'InterfaceBoard.cc',
                         'LiquidCrystalSerial.cc', 'DigiPots.cc',
                         'Eeprom.cc', 'EepromMap.cc', 'Piezo.cc',
                         'UtilityScripts.cc' ],
           'defines' : [ 'HEATERS_ON_STEROIDS', 'HAS_RGB_LED',
-                        'PLATFORM_SPLASH1_MSG=\\\"Sailfish CTC3D Bizer \\\"',
+                        'PLATFORM_SPLASH1_MSG=\\\"Sailfish CTC3D\\\"',
                         'PLATFORM_TOOLHEAD_OFFSET_X=3201',
-                        'PLATFORM_THE_REPLICATOR_STR=\\\"CTC3D Bizer\\\"',
+                        'PLATFORM_THE_REPLICATOR_STR=\\\"NoisebridgeCTC3D\\\"',
                         'EEPROM_MENU_ENABLE' ]
         },
 }
