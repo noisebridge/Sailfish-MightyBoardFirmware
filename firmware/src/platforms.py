@@ -317,7 +317,7 @@ platforms = {
           'defines' : [ 'HEATERS_ON_STEROIDS', 'HAS_RGB_LED',
                         'PLATFORM_SPLASH1_MSG=\\\"Sailfish FF Creator \\\"',
                         'PLATFORM_TOOLHEAD_OFFSET_X=3201',
-                        'PLATFORM_THE_REPLICATOR_STR=\\\"FF Creator\\\"',
+                        'PLATFORM_THE_REPLICATOR_STR=\\\"Noisebridge FFC\\\"',
                         'EEPROM_MENU_ENABLE' ]
         },
 
@@ -472,6 +472,21 @@ platforms = {
                         'AUTO_LEVEL', 'PSTOP_ZMIN_LEVEL', 'COOLING_FAN_PWM',
                         'EEPROM_MENU_ENABLE', 'HAS_RGB_LED',
                         'XY_MIN_HOMING' ]
+        },
+
+    'ctc3d_bizer' :
+        { 'mcu' : 'atmega1280',
+          'programmer' : 'stk500v1',
+          'board_directory' : 'mighty_one',
+          'squeeze' : [ 'Menu.cc', 'Interface.cc', 'InterfaceBoard.cc',
+                        'LiquidCrystalSerial.cc', 'DigiPots.cc',
+                        'Eeprom.cc', 'EepromMap.cc', 'Piezo.cc',
+                        'UtilityScripts.cc' ],
+          'defines' : [ 'HEATERS_ON_STEROIDS', 'HAS_RGB_LED',
+                        'PLATFORM_SPLASH1_MSG=\\\"Sailfish CTC3D\\\"',
+                        'PLATFORM_TOOLHEAD_OFFSET_X=3201',
+                        'PLATFORM_THE_REPLICATOR_STR=\\\"NoisebridgeCTC3D\\\"',
+                        'EEPROM_MENU_ENABLE' ]
         },
 }
 
