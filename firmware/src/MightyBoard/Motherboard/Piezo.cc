@@ -276,6 +276,41 @@ void runPiezoSlice(void) {
 
 //Tunes
 
+const uint16_t tune_overtone[] PROGMEM = {
+	 NOTE_C3,	333,
+	 NOTE_0,		20,
+     NOTE_C4,          333,
+     NOTE_0,         20,
+     NOTE_G4,          333,
+     NOTE_0,         20,
+     NOTE_C5,          333,
+     NOTE_0,         20,
+     NOTE_E5,          333,
+     NOTE_0,         20,
+     NOTE_G5,          333,
+     NOTE_0,         20,
+     NOTE_AS5,          333,
+     NOTE_0,         20,
+     NOTE_C6,          333,
+     NOTE_0,         20,
+     NOTE_D6,          333,
+     NOTE_0,         20,
+     NOTE_E6,          333,
+     NOTE_0,         20,
+     NOTE_FS6,          333,
+     NOTE_0,         20,
+     NOTE_G6,          333,
+     NOTE_0,         20,
+     NOTE_GS6,          333,
+     NOTE_0,         20,
+     NOTE_AS6,          333,
+     NOTE_0,         20,
+     NOTE_B6,          333,
+     NOTE_0,         20,
+     NOTE_C7,          333,
+     NOTE_0,         0,
+};
+
 const uint16_t tune_error[] PROGMEM = {
      NOTE_E5,    105,
      NOTE_0,     105,
